@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+}
+
+.wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	background-color: #f2f2f2;
+	overflow: hidden;
+}
+.message {
+	position: absolute;
+	top: 30px;
+	right: 40px;
+	width: 100%;
+	max-width: 400px;
+	background-color: #fff;
+	padding: 15px 30px 15px 70px;
+	border-radius: 6px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-left: 4px solid #516BEB;
+	transform: translateX(calc(100% + 40px));
+	transition: all 1s cubic-bezier(.48,1.52,.83,.67);
+}
+
+.message.active  {
+	transform: translateX(0);
+}
+.message__checkbox {
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	transform: translate(0, -50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 35px;
+	height: 35px;
+	background-color: #516BEB;
+	border-radius: 100%;
+}
+
+.message__checkbox svg{
+	width: 20px;
+	height: 20px;
+}
+.message__checkbox svg path{ 
+	fill: #fff;
+}
+.message__title {
+	font-weight: 500;
+	font-size: 20px;
+	margin-bottom: 5px;
+	color: #191919;
+}
+.message__text {
+	font-weight: 400;
+	font-size: 14px;
+	color: #191919;
+}
+.message-close {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	cursor: pointer;
+	transition: all .4s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0);
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+}
+
+.message-close:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.message-close svg{
+	width: 10px;
+	height: 10px;
+}
+
+.message-close svg path{
+	fill: #191919;
+}
+.btn {
+	font-size: 20px;
+	line-height: 22px;
+	background-color: #516BEB;
+	border: none;
+	color: #fff;
+	padding: 13px 25px;
+	letter-spacing: 1px;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all .4s ease;
+}
+
+.btn:hover {
+	background-color: #3752db;
+}
